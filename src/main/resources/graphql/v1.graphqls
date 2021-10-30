@@ -1,0 +1,27 @@
+# 定义查询, 此处定义所有的可执行的原子操作，通常是获取种对象的方法
+# 客户端可以组合不同的原子操作到一个请求中
+type Query {
+    greeting: String
+    author(id: ID!): Author
+}
+
+# 定义Author，和java中Author对象对应
+type Author {
+    id: ID!
+    name: String!
+    sex: SexEnum
+    books: [Book!]
+}
+
+# 定义Book，和java中Book对象对应
+type Book {
+    bookName: String!
+    publish: Boolean!
+    price: Float
+}
+
+# 定义枚举，和java中SexEnum对应
+enum SexEnum {
+    man,
+    woman
+}

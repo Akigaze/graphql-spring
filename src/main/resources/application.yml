@@ -1,0 +1,16 @@
+server:
+  port: 9888
+
+
+spring:
+  graphql:
+    path: /gql
+    schema:
+      # merge schema files
+      locations: classpath:/graphql
+      file-extensions: .graphqls, .gqls
+      printer:
+        enabled: true # /graphql/schema 是否暴露接口
+    graphiql:
+      path: /graphiql # web tool
+      enabled: true

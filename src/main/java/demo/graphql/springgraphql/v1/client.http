@@ -1,0 +1,46 @@
+### 组合查询, 自定义操作名，使用变量
+POST http://localhost:9888/gql
+Content-Type: application/json
+
+{
+  "query": "query WantAuthorAndGreeting($id: ID!) { author(id: $id) { name } greeting}",
+  "variables": {
+    "id": 1
+  },
+  "operationName": "WantAuthorAndGreeting"
+}
+
+### 不适用变量，不定义操作名
+POST http://localhost:9888/gql
+Content-Type: application/json
+
+{
+  "query": "query { author(id: 2) { name books { bookName } } greeting}",
+  "variables": {
+    "id": 1
+  },
+  "operationName": null
+}
+
+### 如果要查询对象的所有属性，必须列出所有字段
+POST http://localhost:9888/gql
+Content-Type: application/json
+
+{
+  "query": "query { author(id: 2) {*} greeting}",
+  "variables": {
+    "id": 1
+  },
+  "operationName": null
+}
+
+### 使用切片 fragment
+POST http://localhost:9888/gql
+Content-Type: application/json
+
+{
+  "query": "query { author(id: 2) { id ...authorBooks } greeting } fragment authorBooks on Author { name books { bookName } }",
+  "variables": {
+    "id": 1
+  }
+}

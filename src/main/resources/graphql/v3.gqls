@@ -1,0 +1,29 @@
+type Mutation {
+    # 修改所有学生某个科目的分数
+    courseScore(course: String!, score: Int!): [Score!]!
+    # 修改某个学生某个科目的分数
+    studentScore(in: ScoreInput!): Score
+}
+
+extend type Query {
+    score(course: String): [Score!]!
+}
+
+type Score {
+    # 课程名称
+    course: String!
+    score: Int
+    student: Student
+}
+
+type Student {
+    id: ID!
+    name: String!
+}
+
+# 作为参数输入的类型，要用input声明
+input ScoreInput {
+    course: String!
+    score: Int!
+    studentId: Int!
+}

@@ -1,0 +1,10 @@
+# type Query必须也只能有一个，如果要做多个文件中添加Query，可以使用extend关键字
+extend type Query {
+    course(id: String!): Course
+}
+
+type Course {
+    id: String!
+    name: String!
+    capacity: Int!
+}
