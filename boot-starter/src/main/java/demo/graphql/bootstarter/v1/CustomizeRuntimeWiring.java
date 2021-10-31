@@ -1,4 +1,4 @@
-package demo.graphql.springgraphql.v1;
+package demo.graphql.bootstarter.v1;
 
 import graphql.schema.idl.RuntimeWiring;
 import org.springframework.graphql.execution.RuntimeWiringConfigurer;

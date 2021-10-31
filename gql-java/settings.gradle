@@ -6,7 +6,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = 'graphql-spring'
-include 'boot-starter'
-include 'gql-java'
-
+rootProject.name = 'gql-java'

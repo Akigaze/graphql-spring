@@ -1,4 +1,4 @@
-package demo.graphql.springgraphql.v2;
+package demo.graphql.bootstarter.v2;
 
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;

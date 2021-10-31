@@ -1,4 +1,4 @@
-package demo.graphql.springgraphql.v3;
+package demo.graphql.bootstarter.v3;
 
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;

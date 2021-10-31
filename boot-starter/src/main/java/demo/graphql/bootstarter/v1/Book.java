@@ -1,4 +1,4 @@
-package demo.graphql.springgraphql.v1;
+package demo.graphql.bootstarter.v1;
 
 import lombok.Getter;
 import lombok.Setter;
